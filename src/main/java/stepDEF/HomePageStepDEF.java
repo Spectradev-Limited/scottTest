@@ -27,7 +27,7 @@ public class HomePageStepDEF extends BasePage{
 	@After
 	public void tearDown()
 	{
-		//driver.close();
+		driver.close();
 	}
 	
 	@Given("^user navigates to HomePage$")
