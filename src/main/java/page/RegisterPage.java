@@ -24,18 +24,86 @@ public class RegisterPage extends BasePage {
 	public WebElement submitButton;
 	
 	@CacheLookup
-	@FindBy(how=How.XPATH, using="")
-	public WebElement c;
+	@FindBy(how=How.XPATH, using="//input[@id='id_gender1']")
+	public WebElement mr;
 	
 	@CacheLookup
-	@FindBy(how=How.XPATH, using="")
-	public WebElement d;
-
+	@FindBy(how=How.ID, using="customer_firstname")
+	public WebElement CustomersfirstName;
 	
-	public void enterEmailID()
-	{
-		emailAddress.sendKeys("a1@y.com");
-	}
+	@CacheLookup
+	@FindBy(how=How.ID, using="customer_lastname")
+	public WebElement CustomerslastName;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="passwd")
+	public WebElement password;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="days")
+	public WebElement day;
+
+	@CacheLookup
+	@FindBy(how=How.ID, using="months")
+	public WebElement month;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="years")
+	public WebElement year;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="newsletter")
+	public WebElement tickNewsletter;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="optin")
+	public WebElement OptIn;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="firstname")
+	public WebElement firstName;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="lastname")
+	public WebElement lastName;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="address1")
+	public WebElement address1;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="city")
+	public WebElement city;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="id_state")
+	public WebElement state;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="postcode")
+	public WebElement postcode;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="id_country")
+	public WebElement country;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="phone_mobile")
+	public WebElement mobile;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="alias")
+	public WebElement alias;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//button[@id='submitAccount']//span")
+	public WebElement registerButton;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span")
+	public WebElement accountName;
+	
+	
 
 	public String generateRandomEmailID() 
 	{

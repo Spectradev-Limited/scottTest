@@ -1,5 +1,7 @@
 package stepDEF;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import base.BasePage;
@@ -17,6 +19,8 @@ public class HomePageStepDEF extends BasePage{
 		driver=new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Long.parseLong(prop.getProperty("implicitlyWait")), TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(prop.getProperty("pageLoadWait")), TimeUnit.SECONDS);
 		//navigateToHomePageURL();
 	}
 	

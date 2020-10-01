@@ -18,6 +18,52 @@ public class SignInPage extends BasePage {
 	@FindBy(how=How.CLASS_NAME, using="login")
 	public WebElement signinLink;
 	
+	@CacheLookup
+	@FindBy(how=How.ID, using="email")
+	public WebElement email;
+	
+	@CacheLookup
+	@FindBy(how=How.ID, using="passwd")
+	public WebElement password;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//button[@id='SubmitLogin']//span")
+	public WebElement loginSubmitButton;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"block_top_menu\"]/ul/li[1]/a")
+	public WebElement womensTab;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img")
+	public WebElement womensCloth;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[1]/span")
+	public WebElement dressPrice;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[1]/span")
+	public WebElement dressPrice2;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"add_to_cart\"]/button/span")
+	public WebElement addToCart;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
+	public WebElement proceedToCheckOut;
+	
+	@CacheLookup
+	@FindBy(how=How.XPATH, using="//*[@id=\"total_product_price_1_1_387782\"]")
+	public WebElement dressPrice3;
+	
+	
+	
+	
+	
+	
+	
 	
 	public void clickSignInLink()
 	{
